@@ -84,5 +84,4 @@ businessCart.loadFromStorage();
 
 
 
-// console.log('cart',cart);
-// console.log('business',businessCart)
+
