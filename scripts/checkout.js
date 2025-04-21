@@ -7,6 +7,20 @@ import { loadProductsFetch } from "../data/products.js";
 // import '../data/cart-oop.js'
 // import '../data/cart-class.js'
 
+async function loadPage() {
+  await loadProductsFetch();
+  await new Promise((resolve) => {
+    loadCart(() => {
+      resolve();
+    });
+  });
+  renderOrderSummary();
+  renderPaymentSummary();
+}
+
+loadPage();
+
+/*
 Promise.all([
   loadProductsFetch(),
   
@@ -16,10 +30,11 @@ Promise.all([
     });
   }),
 ]).then((values) => {
-  console.log(values);
   renderOrderSummary();
   renderPaymentSummary();
 });
+
+*/
 
 /*
 
