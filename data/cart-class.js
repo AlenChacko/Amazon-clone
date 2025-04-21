@@ -83,6 +83,6 @@ class Cart {
   const businessCart = new Cart('cart-business');
   
   
-  console.log('cart',cart);
-  console.log('business',businessCart)
+//   console.log('cart',cart);
+//   console.log('business',businessCart)
   
